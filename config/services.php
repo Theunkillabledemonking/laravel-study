@@ -13,29 +13,14 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+
+    // config('services.sparkpost.secret')를 사용하여 설정 값에 접근 가능
     'spartpost' => [
         'secret' => 'abcdefg',
     ],
 
-    'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
-    ],
-
-    'resend' => [
-        'key' => env('RESEND_KEY'),
-    ],
-
-    'ses' => [
-        'key' => env('AWS_ACCESS_KEY_ID'),
-        'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
-    ],
-
-    'slack' => [
-        'notifications' => [
-            'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
-            'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
-        ],
+    'bugsnag' => [
+        'api_key' => env('BUGSNAG_API_KEY'),
     ],
 
 ];
