@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class TasksController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 리소스 목록을 반환
      */
     public function index()
     {
@@ -15,7 +15,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * 리소스 생성을 위한 입력 폼 페이지 출력
      */
     public function create()
     {
@@ -23,7 +23,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 리소스 생성을 처리
      */
     public function store(Request $request)
     {
@@ -31,7 +31,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * 리소스 조회 페이지를 출력
      */
     public function show(string $id)
     {
@@ -39,7 +39,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * 리소스 수정을 위한 수정 폼 페이지를 출력
      */
     public function edit(string $id)
     {
@@ -47,7 +47,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 리소스 수정을 처리
      */
     public function update(Request $request, string $id)
     {
@@ -55,7 +55,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * 리소스를 삭제
      */
     public function destroy(string $id)
     {

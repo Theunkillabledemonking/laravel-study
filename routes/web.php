@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Models\Contact;
 
 Route::get('users/{id}', function($id) {
 
@@ -33,7 +34,14 @@ Route::get('/', [TaskController::class, 'index']);
 Route::get('/tasks/create', [TaskController::class, 'create']);
 Route::post('tasks', [TaskController::class, 'stroe']);
 
-use App\Http\Controllers\TasksController;
 
 Route::resource('tasks', TaskController::class);
+
+// 엘로퀸트 직렬화
+Route::get('api/contacts', function() {
+    return Contact::all();
+});
+Route::get('api/contacts/{id}', function($id) {
+    return Contact::findOrFail($id);
+});
 ?>
