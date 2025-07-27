@@ -172,10 +172,10 @@ class TestController
                 ->delete();
             // 명시적인 방법
             DB::beginTransaction();
-            if ($userId) {
+            if ($userId) { //되돌리거나
                 DB::rollBack();
             }
-            DB::commit();
+            DB::commit();// 마치거나
         });
         
     }
