@@ -25,6 +25,5 @@ class ExampleTest extends TestCase
         $this->assertDatabaseHas('users', [
             'email' => 'wilbur@thisbook.com'
         ]);
-            
     }
 };

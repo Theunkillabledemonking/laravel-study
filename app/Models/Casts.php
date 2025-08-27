@@ -59,27 +59,19 @@ class Json implements CastsAttributes
     }
 }
 
-class User extends Model
-{
-    /**
-     * 형변환이 되어야 하는 속성들
-     * @var array
-    */
-    protected $casts = [
-        'options' => Json::class,
-    ];
+// class User extends Model
+// {
+//     /**
+//      * 형변환이 되어야 하는 속성들
+//      * @var array
+//     */
+//     protected $casts = [
+//         'options' => Json::class,
+//     ];
 
-    // 날짜 변경자
-    protected $dates = [
-        'met_at',
-    ];
+//     // 날짜 변경자
+//     protected $dates = [
+//         'met_at',
+//     ];
 
-    public function query()
-    {
-        // 쿼리 결과 형변환
-        $users = User::select(['id', 'name', 'vip'])->withCasts([
-            'vip' => 'bool'
-        ])->get();
-    };
-
-}
+// }
